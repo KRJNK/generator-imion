@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generator imion dla dziecka — losuj i filtruj</title>
+<meta name="description" content="Szukasz imienia dla dziecka? Filtruj polskie imiona po płci i literze albo losuj. 60 propozycji z znaczeniami.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👶</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <!-- TODO: link do portfolio, gdy powstanie -->
+  <h1>Imię dla dziecka</h1>
+  <p>Filtruj, losuj, zapisuj ulubione.</p>
+  <section class="card">
+    <label>Płeć <select id="sex"><option value="all">dowolna</option><option value="f">żeńskie</option><option value="m">męskie</option></select></label>
+    <label>Na literę <input id="letter" maxlength="1" placeholder="np. A" style="width:4em"></label>
+    <button id="draw" type="button">Losuj 🎲</button>
+  </section>
+  <section class="card">
+    <h2>Wynik</h2>
+    <div id="out" class="big">—</div>
+    <p id="detail" class="hint"></p>
+    <p><button id="fav" type="button">❤ Zapisz do ulubionych</button></p>
+    <div id="favs" class="hint"></div>
+  </section>
+  <section class="card">
+    <h2>Jak to działa</h2>
+    <p>W bazie jest 60 popularnych polskich imion z krótkimi znaczeniami. Filtr płci i litery zawęża listę, a losowanie wybiera z niej kryptograficznie losowo — każde ma równe szanse. Ulubione zapisywane są w przeglądarce, więc lista przetrwa zamknięcie strony.</p>
+    <p><strong>Przykład:</strong> filtr „żeńskie na A” daje m.in. Aleksandrę (obrończyni), Alicję (szlachetnego rodu) i Antoninę (bezcenną). Pamiętaj sprawdzić w urzędzie, czy wybrane imię nie budzi wątpliwości co do płci dziecka — urzędnik może odmówić wpisu.</p>
+  </section>
+  <div id="ads-slot" hidden></div>
+  <footer><a href="privacy.html">Prywatność</a> · <a href="kontakt.html">Kontakt</a></footer>
+</main>
+<script src="app.js"></script>
+<script src="ads.js"></script>
+</body>
+</html>
